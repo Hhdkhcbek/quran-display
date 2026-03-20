@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="تطبيق عرض القرآن الكريم للمساجد — Ramadan Tarawih Display" />
+    <title>عرض القرآن الكريم</title>
+    <!-- Prevent white flash on dark theme -->
+    <style>
+      html, body { background-color: #0d1117; margin: 0; padding: 0; }
+    </style>
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script type="module" crossorigin src="/assets/index-CpJd6Asm.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DwHy2NxF.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js');
+      });
+    }
+  </script>
+</body>
+</html>
