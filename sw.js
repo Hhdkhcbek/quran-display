@@ -5,13 +5,13 @@ self.addEventListener('install', e => {
   e.waitUntil(
     caches.open(CACHE).then(cache =>
       cache.addAll([
-        '/',
-        '/index.html',
-        '/data/quran_sample.json',
-        '/data/phoneme_db.json',
-        '/manifest.json',
-        '/icons/icon-192.png',
-        '/icons/icon-512.png',
+        '/quran-display/',
+        '/quran-display/index.html',
+        '/quran-display/data/quran_sample.json',
+        '/quran-display/data/phoneme_db.json',
+        '/quran-display/manifest.json',
+        '/quran-display/icons/icon-192.png',
+        '/quran-display/icons/icon-512.png',
       ])
     )
   );
@@ -40,7 +40,7 @@ self.addEventListener('fetch', e => {
       }).catch(() => {
         // Fully offline - serve index.html for navigation requests
         if (e.request.mode === 'navigate') {
-          return caches.match('/index.html');
+          return caches.match('/quran-display/index.html');
         }
       });
     })
