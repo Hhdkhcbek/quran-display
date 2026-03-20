@@ -9,20 +9,20 @@
     <style>
       html, body { background-color: #0d1117; margin: 0; padding: 0; }
     </style>
-    <link rel="manifest" href="/manifest.json" />
+    <link rel="manifest" href="/quran-display/manifest.json" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <script type="module" crossorigin src="/assets/index-CpJd6Asm.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-DwHy2NxF.css">
+    <link rel="icon" type="image/svg+xml" href="/quran-display/favicon.svg" />
+    <script type="module" crossorigin src="/quran-display/assets/index-CpJd6Asm.js"></script>
+    <link rel="stylesheet" crossorigin href="/quran-display/assets/index-DwHy2NxF.css">
   </head>
   <body>
     <div id="root"></div>
     <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js');
+        navigator.serviceWorker.register('/quran-display/sw.js');
       });
     }
   </script>
